@@ -1,8 +1,8 @@
 class Executable {
-    void executar(){}
+    void executar(){
+        System.out.println("Hello Executor");
+    }
 }
-
-class Anon extends Executable {}
 
 class Executor {
     void executarXVegades(int x, Executable executable){
