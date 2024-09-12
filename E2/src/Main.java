@@ -1,23 +1,26 @@
 class Notification {
     void show(int num) {
-
-        if (num > 99){
-            System.out.println("You have +99 messages");
-        }else if (num == 1) {
-            System.out.println("You have 1 message");
-        }
-        else {
-            System.out.println("You have " + num + " new messages");
-        }
+        System.out.println("You have " + num + " new messages");
     }
 }
 
-class Anon extends Notification {}
+
 
 public class Main {
     public static void main(String[] args) {
 
-        Anon notification = new Anon(){};
+        Notification notification = new Notification() {
+            void show(int num) {
+
+                if (num > 99) {
+                    System.out.println("You have +99 messages");
+                } else if (num == 1) {
+                    System.out.println("You have 1 message");
+                } else {
+                    System.out.println("You have " + num + " new messages");
+                }
+            }
+        };
 
         notification.show(1);
         notification.show(10);

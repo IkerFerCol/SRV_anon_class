@@ -21,11 +21,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Alumne alumne = new Alumne(){};
+        Alumne alumno = new Alumne(){};
         Objeto inter = new Objeto(){};
 
 
-        imprimirJerarquiaDeClasses(alumne.getClass());
+        imprimirJerarquiaDeClasses(alumno.getClass());
         imprimirJerarquiaDeClasses(inter.getClass());
 
     }
