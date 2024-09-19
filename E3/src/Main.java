@@ -1,5 +1,5 @@
-class Executable {
-    void executar(){}
+abstract class Executable {
+    abstract void executar();
 }
 
 class Executor {
@@ -18,7 +18,7 @@ public class Main {
 
         executor.executarXVegades(10, new Executable(){
             @Override
-            void executar() {
+            public void executar() {
                 System.out.println("Hello Executor");
             }
         });

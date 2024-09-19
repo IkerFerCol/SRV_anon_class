@@ -51,9 +51,10 @@ public class Main {
                 seg = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Tiempo no válido.");
-                seg = 0;
+                break;
+
             }
-            int finalSeg = seg;
+
             new Temporitzador()
                     .programar(new Alerta() {
                         @Override
@@ -63,7 +64,7 @@ public class Main {
 
                         @Override
                         public int getSegons() {
-                            return finalSeg;
+                            return seg;
                         }
                     })
                     .esperarQueAcabenLesAlertes();
